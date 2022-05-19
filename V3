@@ -1,0 +1,340 @@
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "MP5",
+	Text = "Successfully Loaded!",
+})
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/449198ab5e63b988b1297cba403ac3a1ed672d9a/source.lua"))()
+local Window = Library.CreateLib("MP5 - V3", "DarkTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+Section:NewKeybind("Menu Keybind", "KeybindInfo", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("Smooth Lock (C)", "Keybind Is C", function()
+getgenv().RecurringPoint = "UpperTorso"
+getgenv().Hitbox = "UpperTorso"
+getgenv().Keybind = "c"
+getgenv().AimbotStrengthAmount = 0.0335
+getgenv().PredictionAmount = 10
+getgenv().Radius = 25
+getgenv().UsePrediction = true
+getgenv().AimbotStrength = true
+getgenv().FirstPerson = true
+getgenv().ThirdPerson = true
+getgenv().TeamCheck = false
+getgenv().Enabled = true
+ 
+ 
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/tenaaki/GenericAimbot/main/v1.0.0"))()
+end)
+Section:NewButton("Box Lock (Q)", "Keybind Is Q", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/koeqh/box-lock/main/box%20lock"))()
+end)
+Section:NewButton("Godmode", "yeah its weird asf", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VaultGitos/Others/main/Weird%20God%20Mode.lua"))()
+end)
+Section:NewButton("Low GFX", "20+ FPS", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/koeqh/Fps-Booster/main/Fps%20Booster"))()
+end)
+Section:NewButton("No-Slowdown", "No-Slowdown", function()
+local lplayer = game.Players.LocalPlayer
+
+game:GetService('RunService').Stepped:Connect(function()
+   pcall(function()
+       lplayer.Character.BodyEffects.Movement:ClearAllChildren()
+   end)
+end)
+end)
+Section:NewButton("Serverhop", "imagine loggin lolz", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+Section:NewButton("Rejoin Server", "1542x1 was here", function()
+local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+end)
+local Tab = Window:NewTab("Animations")
+local Section = Tab:NewSection("Tryhard")
+Section:NewButton("TryhardV1", "decent", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/GUdSVCGQ"))()
+end)
+Section:NewButton("TryhardV2", "my fav", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=656117878"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=656115606"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+
+end)
+Section:NewButton("TryhardV3", "this one is alr", function()
+while true do
+    wait(1)
+    for i, player in ipairs(game.Players:GetChildren()) do
+    local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=782841498"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=5319841935"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1083439238"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+    end
+end
+end)
+local Tab = Window:NewTab("Cosmetics")
+local Section = Tab:NewSection("Korblox And Headless")
+Section:NewButton("Korblox", "Client Sided", function()
+local ply = game.Players.LocalPlayer
+        local chr = ply.Character
+        chr.RightLowerLeg.MeshId = "902942093"
+        chr.RightLowerLeg.Transparency = "1"
+        chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+        chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+        chr.RightFoot.MeshId = "902942089"
+        chr.RightFoot.Transparency = "1"
+end)
+Section:NewButton("Headless", "Client Sided", function()
+local ply = game.Players.LocalPlayer
+game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0, 0)
+    game.Players.LocalPlayer.Character.Head.Size = Vector3.new(0,0, 0)
+    game.Players.LocalPlayer.Character.Head.Massless = true
+    game.Players.LocalPlayer.Character.Head.Massless = true
+end)
+local Tab = Window:NewTab("Anti-Lock")
+local Section = Tab:NewSection("Anti-Lock")
+Section:NewButton("Anti-Lock", "Reallll", function()
+
+IsFirstPerson = false
+ShiftHeld = false
+WHeld = false
+SHeld = false
+AHeld = false
+DHeld = false -- LMFAO
+local gcheck = true
+urspeed = 0.05 -- The lower it is the faster. So don't worry about it being minus 1
+
+
+function ChangeFaster(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.N and gameProcessedEvent == false then        
+urspeed = urspeed - 0.025
+    end
+end
+ 
+
+
+function ChangeSlower(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.M and gameProcessedEvent == false then        
+urspeed = urspeed + 0.025
+    end
+end
+ 
+
+
+function GChecker(inputObject, gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.T and gameProcessedEvent == false then        
+if gcheck == false then
+gcheck = true
+elseif gcheck == true then
+gcheck = false
+end
+
+    end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(GChecker)
+
+
+
+function PressShift(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.LeftShift and gameProcessedEvent == false and gcheck == true then
+        ShiftHeld = true
+    end
+end
+
+function ReleaseShift(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.LeftShift then
+        ShiftHeld = false
+    end
+end
+
+
+function PressW(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.W and gameProcessedEvent == false and gcheck == true then
+        WHeld = true
+    end
+end
+
+function ReleaseW(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.W then
+        WHeld = false
+    end
+end
+
+function PressS(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.S and gameProcessedEvent == false and gcheck == true then
+        SHeld = true
+    end
+end
+
+function ReleaseS(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.S then
+        SHeld = false
+    end
+end
+
+
+function PressA(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.A and gameProcessedEvent == false and gcheck == true then
+        AHeld = true
+    end
+end
+
+function ReleaseA(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.A then
+        AHeld = false
+    end
+end
+
+
+function PressD(inputObject,gameProcessedEvent)
+    if inputObject.KeyCode == Enum.KeyCode.D and gameProcessedEvent == false and gcheck == true then
+        DHeld = true
+    end
+end
+
+function ReleaseD(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.KeyCode.D then
+        DHeld = false
+    end
+end
+
+function CheckFirst(inputObject,gameProcessed)
+    if inputObject.KeyCode == Enum.UserInputType.MouseWheel then
+        if (player.Character.Head.CFrame.p - workspace.CurrentCamera.CFrame.p).magnitude < 0.6 then
+            IsFirstPerson = true
+	elseif (player.Character.Head.CFrame.p - workspace.CurrentCamera.CFrame.p).magnitude > 0.6 then
+	    IsFirstPerson = false
+        end
+    end
+end
+
+game:GetService("UserInputService").InputBegan:connect(PressShift)
+game:GetService("UserInputService").InputEnded:connect(ReleaseShift)
+
+game:GetService("UserInputService").InputBegan:connect(PressW)
+game:GetService("UserInputService").InputEnded:connect(ReleaseW)
+
+game:GetService("UserInputService").InputBegan:connect(PressS)
+game:GetService("UserInputService").InputEnded:connect(ReleaseS)
+
+game:GetService("UserInputService").InputBegan:connect(PressA)
+game:GetService("UserInputService").InputEnded:connect(ReleaseA)
+
+game:GetService("UserInputService").InputBegan:connect(PressD)
+game:GetService("UserInputService").InputEnded:connect(ReleaseD)
+
+game:GetService("UserInputService").InputChanged:connect(CheckFirst)
+
+game:GetService("UserInputService").InputBegan:connect(ChangeFaster)
+game:GetService("UserInputService").InputBegan:connect(ChangeSlower)
+
+
+game:GetService('RunService').Stepped:connect(function()
+if ShiftHeld == true then
+
+if WHeld == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-urspeed)
+end
+
+if SHeld == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,urspeed)
+end
+
+if DHeld == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(urspeed,0,0)
+end
+
+if AHeld == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(-urspeed,0,0)
+end
+
+
+end
+end)
+
+repeat
+    wait()
+until game:IsLoaded()
+local gm = getrawmetatable(game)
+setreadonly(gm, false)
+local namecall = gm.__namecall
+gm.__namecall =
+    newcclosure(
+    function(self, ...)
+        local args = {...}
+        if not checkcaller() and getnamecallmethod() == "FireServer" and tostring(self) == "MainEvent" then
+            if tostring(getcallingscript()) ~= "Framework" then
+                return
+            end
+        end
+        if not checkcaller() and getnamecallmethod() == "Kick" then
+            return
+        end
+        return namecall(self, unpack(args))
+    end
+)
+
+end)
+local Tab = Window:NewTab("Trash Talk")
+local Section = Tab:NewSection("Trash Talk")
+Section:NewButton("Keybind Is Y", "LOLLLL", function()
+local words = {
+    'dawg u are terrible i aint locking, get better son',
+    'sonned',
+    'ur so bad bro',
+    'just log alr',
+}
+
+local player = game.Players.LocalPlayer
+local keybind = 'y'
+
+local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+
+player:GetMouse().KeyDown:connect(function(key)
+    if key == keybind then
+        event:FireServer(words[math.random(#words)], "All")
+    end
+end) 
+end)
+local Tab = Window:NewTab("Server Crasher")
+local Section = Tab:NewSection("Crash Types")
+Section:NewButton("Swagmode Crasher", "Takes about 1-3m", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SuperCustomServerCrasher'))()
+end)
+Section:NewButton("Encrypt Crasher", "Takes about 15m", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LPrandom/lua-projects/master/dhcquickcrash.lua"))()
+end)
+Section:NewButton("GS21 Low End Crasher", "Takes about 1-3m", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GS21Official/DH-TB-Crash/main/Swagmode%20crash%20modified%20(better%20FPS)%20crash"))()
+end)
+local Tab = Window:NewTab("Credits")
+local Section = Tab:NewSection("Swagmode, Server Crasher")
+local Section = Tab:NewSection("Encrypt, Server Crasher")
+local Section = Tab:NewSection("GS21, Low End Swagmode Crasher")
+local Section = Tab:NewSection("tenaki, Smooth aimlock")
+local Section = Tab:NewSection("1542x1 Made This")
+local Section = Tab:NewSection("hi gabe")
